@@ -6,7 +6,7 @@
 /*   By: alegrix <alegrix@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 17:01:49 by alegrix           #+#    #+#             */
-/*   Updated: 2025/10/17 18:07:44 by alegrix          ###   ########.fr       */
+/*   Updated: 2025/10/20 18:13:27 by alegrix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ std::ostream	&operator<<(std::ostream &os,const Fixed &src)
 	os << src.toFloat();
 	return (os);
 }
-
 
 Fixed	&Fixed::operator=(const Fixed &src)
 {

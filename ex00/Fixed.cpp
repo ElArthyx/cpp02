@@ -6,7 +6,7 @@
 /*   By: alegrix <alegrix@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 15:16:59 by alegrix           #+#    #+#             */
-/*   Updated: 2025/10/15 20:01:14 by alegrix          ###   ########.fr       */
+/*   Updated: 2025/10/20 20:09:35 by alegrix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void Fixed::setRawBits(int const raw)
 {
 	this->f_val = raw;
 }
+
 Fixed	&Fixed::operator=(const Fixed &cpy)
 {
 	std::cout << "Copy assignment operator called\n\r";
