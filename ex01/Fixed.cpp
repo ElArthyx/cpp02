@@ -6,24 +6,19 @@
 /*   By: alegrix <alegrix@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 17:01:49 by alegrix           #+#    #+#             */
-/*   Updated: 2025/10/20 18:13:27 by alegrix          ###   ########.fr       */
+/*   Updated: 2025/10/30 16:08:09 by alegrix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <cmath>
 
-Fixed::Fixed(float const nb): _f_val(roundf(nb * (1 << this->_frac_bits)))
-{
+Fixed::Fixed(float const nb): _f_val(roundf(nb * (1 << this->_frac_bits))) {
 	std::cout << "Float constructor called" << std::endl;
-	return ;
 }
 
-
-Fixed::Fixed(int const nb): _f_val(nb << _frac_bits)
-{
+Fixed::Fixed(int const nb): _f_val(nb << _frac_bits) {
 	std::cout << "Int constructor called" << std::endl;
-	return ;
 }
 
 Fixed::Fixed(): _f_val(0) {

@@ -6,7 +6,7 @@
 /*   By: alegrix  <alegrix@student.42lehavre.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:56:56 by alegrix           #+#    #+#             */
-/*   Updated: 2025/10/17 19:17:47 by alegrix          ###   ########.fr       */
+/*   Updated: 2025/10/30 13:31:52 by alegrix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class Fixed
 		static const int	_frac_bits = 8;
 	
 	public:
-
 		Fixed();
 		Fixed(const float nb);
 		Fixed(const int nb);

@@ -6,7 +6,7 @@
 /*   By: alegrix <alegrix@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 17:01:49 by alegrix           #+#    #+#             */
-/*   Updated: 2025/10/17 19:19:19 by alegrix          ###   ########.fr       */
+/*   Updated: 2025/11/10 15:58:54 by alegrix          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,22 +133,34 @@ bool	Fixed::operator<(const Fixed &other) const
 
 Fixed Fixed::operator+(const Fixed &other)
 {
-	return (Fixed(this->_f_val + other._f_val));
+	Fixed	tmp;
+
+	tmp.setRawBits(this->_f_val + other._f_val);
+	return (tmp);
 }
 
 Fixed Fixed::operator-(const Fixed &other)
 {
-	return (Fixed(this->_f_val - other._f_val));
+	Fixed	tmp;
+
+	tmp.setRawBits(this->_f_val - other._f_val);
+	return (tmp);
 }
 
 Fixed Fixed::operator/(const Fixed &other)
 {
-	return (Fixed(this->toFloat() / other.toFloat()));
+	Fixed	tmp;
+
+	tmp.setRawBits((long)(this->_f_val) << this->_frac_bits / other._f_val);
+	return (tmp);
 }
 
 Fixed Fixed::operator*(const Fixed &other)
 {
-	return (Fixed(this->toFloat() * other.toFloat()));
+	Fixed	tmp;
+
+	tmp.setRawBits(((long)(this->_f_val) * other._f_val) >> this->_frac_bits);
+	return (tmp);
 }
 
 Fixed	&Fixed::operator++()
@@ -177,4 +189,3 @@ Fixed	Fixed::operator--(int)
 	--*this;
 	return (tmp);
 }
-
